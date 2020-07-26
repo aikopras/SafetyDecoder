@@ -21,8 +21,8 @@ The state will become W_RELAY_OFF, the red LED turns on and the button light sta
 
 ## Emergency stop function:
 The safety decoder will also monitor if one of the emergency stop buttons is pushed. If such button is pushed, the decoder will generate an RS-bus feedback message and will react in one of the following ways:
-1. If the state is LOCAL (= watchdog function is inactive), it will deactivate the watchdog relay
-2. If the state is REMOTE (= watchdog function is active), it will start a short timer (default 2 seconds) after which it checks if trains have been stopped by the computer or not.
+1. If the state is [LOCAL](documentation/safety-local.pdf) (= watchdog function is inactive), it will deactivate the watchdog relay
+2. If the state is [REMOTE](documentation/safety-remote.pdf) (= watchdog function is active), it will start a short timer (default 2 seconds) after which it checks if trains have been stopped by the computer or not.
     1. If trains have not been stopped by the computer, the relay will be released to ensure the DCC control system will stop all trains
     2. If trains have been stopped by the computer, we wait a while to allow human intervention. If, after this period is over, trains start moving again, we move back to the LOCAL state.
 
