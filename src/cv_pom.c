@@ -85,7 +85,7 @@ unsigned char LocalCV24;		// Local copy of CV24 (PoMStart)
 // - CV1       (Accessory address - low)
 // - CV9       (Accessory address - high)
 // - CV10      (RS-Bus address)
-// - CV19-CV21 (CmdStation, RSRetry, SkipEven)
+// - CV19-CV21 (CmdStation, RSRetry, SkipUnEven)
 // - CV33      (Decoder will send feedback via RS-Bus: SendFB)
 // - CV34-CV41 (Safety decoder specific: P_Emergency, T_Watchdog, T_TrainMove, 
 //              T_CheckMove, T_RS_PushX)

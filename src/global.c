@@ -75,7 +75,7 @@ unsigned char My_RS_Addr;		// Base RS-bus address of this feedback module
 								// Range: 1..128 / 0 if not initialized
 unsigned char RS_Addr2Use;		// RS-bus address used by RS bus hardware routines / over the RS-bus
 								// This is the address seen by the command station (RS-bus receiver)
-								// Is equal to, or 1 higher (in case of SkipEven) than My_RS_Addr
+								// Is equal to, or 1 higher (in case of SkipUnEven) than My_RS_Addr
 unsigned int  My_Loco_Addr;		// Decoder listens to loco address to facilitate PoM and F1..F4
 								// Derived from LOCO_OFFSET and My_RS_Base_Addr / My_Dec_Addr
 								// If My_Dec_Addr is invalid, My_Loco_Addr will become LOCO_OFFSET - 1
