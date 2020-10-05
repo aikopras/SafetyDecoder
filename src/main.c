@@ -119,7 +119,6 @@ void WaitDebounceTime(void) {
 
 
 void DoProgramming(void) {
-/*  
   unsigned char my_cv1;				// Local copy of CV1
   unsigned char my_cv9;				// Local copy of CV9
   int Ticks_Waited = 0;				// With 100 msec resolution
@@ -163,7 +162,6 @@ void DoProgramming(void) {
     }
   }
   return;  
- */
 }
 
 
@@ -239,6 +237,15 @@ int main(void)
     // write_lcd_string("Safety");
     
     sei();				// Global enable interrupts
+    
+    // Check if the EEPROM has been initialised. In case the program is compiled 
+    // and flashed using "make flash", the EEPROM should have been initialised during flash. 
+    // However, the Arduino IDE does not flash the EPPROM during program upload. 
+    // In that case we need to initialise from here. 
+    if ((my_eeprom_read_byte(&CV.VID) != 0x0D) || (my_eeprom_read_byte(&CV.VID_2) != 0x0D)) {
+      ResetDecoder();                             // Copy all default values to EEPROM
+      _restart();                                 // really hard exit
+    }
 
     // check if the decoder has a valid Decoder address
     if (My_Dec_Addr == INVALID_DEC_ADR) flash_led_fast(5);

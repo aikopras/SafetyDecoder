@@ -47,6 +47,7 @@
 #include "safety.h"            // For MAX_INPUT_PINS
 #include "safety_button.h"     // For the input[] array
 
+#include "lcd_ap.h"
 
 //*****************************************************************************************************
 // DEFINES, STRUCTS and Variable declarations
@@ -187,5 +188,3 @@ unsigned char emergency_button_pushed(void) {
   }
   return result;
 }
-
-

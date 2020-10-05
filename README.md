@@ -31,8 +31,12 @@ Meaning of LEDs cpnnected to the X10 connector of the safety decoder:
 * Green LED: Remote control by the computer: watchdog function is active,
 * Red LED: watchdog relay is released.
 
-The software is written in C and runs on ATMEGA16A and similar processors (32A, 164A, 324A, 644P). 
-It is an extension of the [Opendecoder](https://www.opendcc.de/index_e.html) project, and written in "pre-Arduino times". Therefore compilation is based on a traditional [makefile](src/Makefile), and assumes availability of gcc, [avrdude](https://www.nongnu.org/avrdude/) as well as a USBasp programmer.
-
+## Hardware
 A description of this decoder and related decoders can be found on [https://sites.google.com/site/dcctrains](https://sites.google.com/site/dcctrains).
 The hardware and schematics can be downloaded from my [EasyEda page](https://easyeda.com/aikopras/watchdog-decoder),
+
+
+## Compiling and Flashing
+The software is written in C and runs on ATMEGA16A and similar processors (32A, 164A, 324A, 644P). 
+It is an extension of the [Opendecoder](https://www.opendcc.de/index_e.html) project, and written in "pre-Arduino times". Therefore compilation is based on a traditional [makefile](src/Makefile), and assumes availability of gcc, [avrdude](https://www.nongnu.org/avrdude/) as well as a USBasp programmer.
+Note however that the program can also be compiled and flashed via the Arduino IDE. Instructions for using the Arduino IDE can be found in the [<b>Arduino-SAFETY.ino</b> file](/src/Arduino-SAFETY.ino). Note that you have to rename the /src directory into "Arduino-SAFETY" before you open the .ino file. 
