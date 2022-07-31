@@ -1,37 +1,30 @@
-//------------------------------------------------------------------------
-//
-// OpenDCC - OpenDecoder
-//
-// Copyright (c) 2007 Kufer
-//
-// This source file is subject of the GNU general public license 2,
-// that is available at the world-wide-web at
-// http://www.gnu.org/licenses/gpl.txt
-// 
-//------------------------------------------------------------------------
-//
-// file:      port_engine.h
-// author:    Wolfgang Kufer
-// contact:   kufer@gmx.de
-// webpage:   http://www.opendcc.de
-// history:   2007-02-14 V0.1 kw copied from opendecoder.c
-//
-//------------------------------------------------------------------------
-//
-// purpose:   flexible general purpose decoder for dcc
-//            here: hardware defintions
-//
-//
-//------------------------------------------------------------------------
-
-void turn_led_on(void);
-void turn_led_off(void);
-
-void feedback_led(void);
-void activity_led(void);
-  
-void flash_led_fast(unsigned char count);
-
-void check_led_time_out(void);
+/*******************************************************************************************************
+File:      led.h
+Author:    Aiko Pras
+History:   2022/06/14 AP Version 1.0
 
 
+Purpose:   Implements the safety decoder specific LEDs
+           The LED objects defined in AP_DCC_LED are relatively expensive regarding SRAM (43 bytes)
+           Therefore we create here our own simple On-Off LED class
+
+******************************************************************************************************/
+#pragma once
+#include <Arduino.h>
+#include <AP_DCC_LED.h>
+
+
+class Leds {
+  public:
+    void init();           // Attach the LEDs to the various pins
+    void update();         // Called at the end of the Main loop as frequent as possible
+
+    DCC_Led safety;
+    Basic_Led red;
+    Basic_Led yellow;
+    Basic_Led green;
+};
+
+
+// The following relay object is defined in led.cpp, and may be used elsewhere
+extern Leds leds;
