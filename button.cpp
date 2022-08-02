@@ -38,7 +38,7 @@ Purpose:   Implements the safety decoder buttons
 // ****************************************************************************************************
 
 #include <Arduino.h>
-#include <AP_DCC_Decoder_Basic.h>     // To read CV values
+#include <AP_DCC_Decoder_Core.h>      // To read CV values
 #include <AP_DCC_Button.h>
 #include "button.h"
 #include "hardware.h"

@@ -31,7 +31,7 @@ Note that bit numbering on the LH-100 handheld is 1 higher
 ******************************************************************************************************/
 #pragma once
 #include <Arduino.h>                  // For general definitions
-#include <AP_DCC_Decoder_Basic.h>     // To include all objects, such as dcc, accCmd, etc.
+#include <AP_DCC_Decoder_Core.h>      // To include all objects, such as dcc, accCmd, etc.
 
 
 class DccSystem {

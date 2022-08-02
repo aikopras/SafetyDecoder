@@ -12,7 +12,7 @@ Purpose:   Implements the statemachine that controls operation of the safety dec
 ******************************************************************************************************/
 #include <Arduino.h>
 #include <LiquidCrystal.h>
-#include <AP_DCC_Decoder_Basic.h>    // all generic objects are instantiated in here
+#include <AP_DCC_Decoder_Core.h>     // all generic objects are instantiated in here
 #include "safety.h"
 #include "button.h"
 #include "dcc_rs.h"

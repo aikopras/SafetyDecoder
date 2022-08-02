@@ -1,5 +1,5 @@
 // *****************************************************************************************************
-// File:      safety.ino
+// File:      safetyDecoder.ino
 // Author:    Aiko Pras
 // History:   2013-01-12 V0.1 AP: initial version, based on OpenDCC
 //            2016-01-11 V0.2 AP: major rewrite, to ensure compatibility with TrainController
@@ -26,7 +26,7 @@
 
 #include <Arduino.h>
 #include <LiquidCrystal.h>           // Allow LCD output of the current state and position
-#include <AP_DCC_Decoder_Basic.h>    // all generic objects are instantiated in here
+#include <AP_DCC_Decoder_Core.h>     // all generic objects are instantiated in here
 #include "hardware.h"                // Pins for LEDs, DCC input, RS-Bus output, buttons, relays ...
 #include "safety.h"                  // Pins for LEDs, DCC input, RS-Bus output, buttons, relays ...
 #include "button.h"                  // The buttons object is defined here
