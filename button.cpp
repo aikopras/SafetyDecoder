@@ -39,7 +39,6 @@ Purpose:   Implements the safety decoder buttons
 
 #include <Arduino.h>
 #include <AP_DCC_Decoder_Core.h>      // To read CV values
-#include <AP_DCC_Button.h>
 #include "button.h"
 #include "hardware.h"
 #include "dcc_rs.h"                   // The RS-Bus object is defined and instantiated here

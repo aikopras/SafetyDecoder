@@ -31,8 +31,8 @@ Purpose:   Implements the safety decoder buttons
 // ******************************************************************************************************
 #pragma once
 #include <Arduino.h>
+#include <AP_DCC_Decoder_Core.h>
 #include <AP_DCC_Timer.h>
-#include <AP_DCC_Button.h>
 #include "hardware.h"
 
 
@@ -46,11 +46,11 @@ class Buttons {
     uint8_t emergencyPin;
 
   private:
-    // The Button class is inherited from the DCC_Button class, but has some extra parameters
+    // The Button class is inherited from the DccButton class, but has some extra parameters
     const uint8_t TOGGLE = 0;            // for readability
     const uint8_t PUSH = 1;
     bool emergencyFlag;                  // Internal boolean, checked and cleared by emergencyPushed()
-    class Button: public DCC_Button {
+    class Button: public DccButton {
       public:
         bool isEmergency = false;
         bool type;
