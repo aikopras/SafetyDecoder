@@ -32,7 +32,6 @@ Purpose:   Implements the safety decoder buttons
 #pragma once
 #include <Arduino.h>
 #include <AP_DCC_Decoder_Core.h>
-#include <AP_DCC_Timer.h>
 #include "hardware.h"
 
 

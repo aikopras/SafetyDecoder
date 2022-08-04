@@ -14,7 +14,7 @@ Purpose:   Implements the statemachine that controls operation of the safety dec
 #pragma once
 #include <Arduino.h>
 #include <LiquidCrystal.h>
-#include <AP_DCC_Timer.h>
+#include <AP_DCC_Decoder_Core.h>
 
 
 class StateMachine {

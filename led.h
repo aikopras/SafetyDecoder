@@ -19,10 +19,10 @@ class Leds {
     void init();           // Attach the LEDs to the various pins
     void update();         // Called at the end of the Main loop as frequent as possible
 
-    DCC_Led safety;
-    Basic_Led red;
-    Basic_Led yellow;
-    Basic_Led green;
+    DccLed safety;
+    BasicLed red;
+    BasicLed yellow;
+    BasicLed green;
 };
 
 

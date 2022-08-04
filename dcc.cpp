@@ -10,7 +10,6 @@ Purpose:   Implements the safety decoder specific DCC message reception
 ******************************************************************************************************/
 #include <Arduino.h>
 #include <AP_DCC_Decoder_Core.h>      // To include all objects, such as dcc, accCmd, etc.
-#include <AP_DCC_Timer.h>             // The DccTimer class is defined there
 #include "dcc_rs.h"
 
 
