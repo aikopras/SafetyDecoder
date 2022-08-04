@@ -1,4 +1,4 @@
-# Description #
+# <a name="Description"></a>Description #
 
 The safety decoder performs two functions:
 - Watchdog function: to check if the PC with train control software still sends accessory commands.
@@ -38,8 +38,8 @@ The safety decoder also monitors if one of the emergency stop buttons is pushed.
 
    If trains have been stopped by the computer, the decoder waits a while to allow human intervention. If, after this period is over, trains start moving again, the decoder moves back to the **START_UP** / **LOCAL** state.
 
-### DCC and RS-Bus addresses ###
-The DCC address can be set using the onboard button, like all other decoder boards. Once an Accessory address is entered, it will be stored in the respective CVs. However, via the onboard button we can not set the RS-bus address. By default that address is 127. In case a change is needed, POM messages should be used to change the CV for the RS-Bus address (CV10)
+### State diagrams ###
+The PDF files in this directory show details of the state machine.
 
 ### LEDs ###
 
@@ -48,6 +48,3 @@ Meaning of LEDs connected to the X10 connector of the safety decoder
 - Green  LED: Remote control by the computer: watchdog function is active
 - Red    LED: watchdog relay is released
 - Extra  LED: no special meaning
-
-### Hardware ###
-The safety decoder hardware can be found on https://oshwlab.com/aikopras/watchdog-decoder

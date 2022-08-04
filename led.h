@@ -11,7 +11,7 @@ Purpose:   Implements the safety decoder specific LEDs
 ******************************************************************************************************/
 #pragma once
 #include <Arduino.h>
-#include <AP_DccLED.h>
+#include <AP_DCC_Decoder_Core.h>
 
 
 class Leds {
