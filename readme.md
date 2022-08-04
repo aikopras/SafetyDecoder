@@ -9,8 +9,9 @@ If such accessory message has not been received, the safety decoder assumes the 
 Whereas the watchdog function uses a rather *brute-force* method to stop trains (by removing power from the tracks), the safety decoder has also the ability to stop trains in a more *graceful* way by informing the train controller program via RS-Bus messages that the user pushed an emergency stop button. The train controller program has now the opportunity to bring all trains to a controlled stop, for example by sending an XpressNet stop all locomotives request / emergency stop command. The safety decoder will now monitor if the computer program has indeed ordered all trains to stop; if trains are still moving the safety decoder will activate the relay to force a *brute-force* stop.
 
 Links to further information:
-- [details of the decoder's operation](extras/Description.md#Description)
-- [used addresses and configuration](extras/Addresses.md#Addresses)
+- [Details of the decoder's operation](extras/Description.md#Description)
+- [Used addresses and configuration](extras/Addresses.md#Addresses)
+- [Alternatives to stop trains](extras/HowToStop.md#HowToStop)
 
 ### Compatible DCC systems ###
 The safety decoder was specifically designed for a LENZ (LZV100 / LV102). The decoder is able to send RS-Bus messages, and the relay can  connect the LZV100 master station to the LV102 boosters.
